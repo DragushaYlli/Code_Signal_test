@@ -9,3 +9,15 @@ def delivery_progress(completed_items: int, total_items: int) -> float:
     if completed_items < 0 or completed_items > total_items:
         raise ValueError("completed_items must be between zero and total_items")
     return round((completed_items / total_items) * 100, 2)
+
+
+def risk_label(score: float) -> str:
+    """Map a zero-to-one-hundred risk score to a simple test label."""
+
+    if not 0 <= score <= 100:
+        raise ValueError("score must be between zero and one hundred")
+    if score <= 34:
+        return "LOW"
+    if score <= 64:
+        return "MEDIUM"
+    return "HIGH"
