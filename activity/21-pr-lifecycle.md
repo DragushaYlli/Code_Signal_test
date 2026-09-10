@@ -2,4 +2,5 @@
 
 - Status: Ready for review
 - Evidence: This branch supplies a real PR-opened event.
-- Next: Apply one review update and close without merging.
+- Review update: Additional validation evidence was added after opening.
+- Next: Close without merging to exercise the final lifecycle state.
