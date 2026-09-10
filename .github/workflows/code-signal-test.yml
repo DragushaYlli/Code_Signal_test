@@ -22,5 +22,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Hold the controlled cancellation run
+        if: github.head_ref == 'code-signal/cancelled-pipeline-test'
+        run: sleep 120
+
       - name: Run unit tests
         run: python -m unittest discover -s tests -v
