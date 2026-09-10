@@ -4,3 +4,10 @@ This repository exists only to generate safe GitHub activity for the DEXA PM AI 
 
 The sample module and workflow are intentionally small. They provide real commit and pipeline events without containing production data or credentials.
 
+## Local validation
+
+Run the dependency-free test suite with:
+
+```powershell
+python -m unittest discover -s tests -v
+```
